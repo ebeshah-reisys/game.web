@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="gameAppWeb">
+
+<head>
+  <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+  <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body ng-controller="MainController">
+  <ul class="nav nav-tabs">
+    <li class="active"><a ng-click="setRoute('home')">Home</a>
+    </li>
+    <li><a ng-click="setRoute('user')">Users</a>
+    </li>
+    <li><a ng-click="setRoute('about')">About</a>
+    </li>
+  </ul>
+  <div ng-view=""></div>
+  <div>
+    <strong>{{error}}</strong>
+  </div>
+</body>
+
+</html>
